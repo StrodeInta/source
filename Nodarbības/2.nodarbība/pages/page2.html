@@ -1,14 +1,51 @@
 <!DOCTYPE html>
 <html lang="lv">
 <head>
-    <meta charset="UTF-8"> <! var pievienot milstinājumus čšģķ>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8"> <!--var pievienot milstinājumus čšģķ-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="picture/532.ico">
+    <link rel="stylesheet" type="text/css" href="css\style.css">
+    <title>Music</title>
 </head>
 <body>
-    <embed height="500" width="1000" src="sounds/retro.wav"> <! pievienot plejeri pēc savien izmēriem>
-    <audio controls>
-        <source src="sounds/retro.wav" type="audio/mpeg"> <!pievienot mūziku>
+    <embed height="100" width="200" src="sounds/retro.wav"> <!--pievienot plejeri pēc savien izmēriem-->
+    <button onclick="playAudio()">Atskaņot mūziku</button>
+    <button onclick="stopAudio()">stop audio</button>
+    <audio id="bgMusic"loop> <!--bezgalīgi atskaņos ar loop-->
+        <source src="sounds/retro.wav" type="audio/mpeg"> <!--pievienot mūziku-->
     </audio>
+    <div id="regForm">
+        <form>
+            <table><!--Ievadīt vārdu un uzvārdu izmantojot tables-->
+                <tr>
+                    <td><label for="fname">Name</label></td>
+                    <td><input type="text" id="fname" name="fname"></td>
+                </tr>
+                <tr>
+                    <td><label for="sname">Surmane</label></td>
+                    <td><input type="text" id="sname" name="sname"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+   <!-- <form> ------Ievadīt vārdu un uzvārdu izmantojot label------
+        <label for="fname">
+            First name:
+        </label><br>
+        <input type="text" id="fname" name="fname"><br>
+            <label for="lname">
+                Last name:</label><br>
+                <input type="text" id="lname" name="lname">
+    </form>-->
+    <script>
+    function playAudio() {
+            document.getElementById("bgMusic").ply();
+        }
+    function stopAudio()
+     {
+        document.getElementById("bgMusic").pause();
+        
+    }
+    </script>
 </body>
 </html>

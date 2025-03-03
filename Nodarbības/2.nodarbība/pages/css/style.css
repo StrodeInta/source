@@ -1,0 +1,15 @@
+/* ar . punktu atzīme klases */
+.skolnieks {
+    background-color: brown;
+    color: white;
+    border: 2px solid black;
+    margin: 20px;
+    padding: 20px;
+}
+/* # ar hashtag atzīme id  */
+#regForm {
+    width: 500px;
+    align-content: center;
+    text-align: center;
+    background-color: brown;
+}
