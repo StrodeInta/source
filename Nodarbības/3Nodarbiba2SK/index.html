@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <form id="myForm">
+        <table>
+            <tr>
+                <td>
+                    <input type="number" id="age" name="age" />
+                </td>
+                <td>
+                    <!--<button onclick="ageCheck(form)">Submit</button>-->
+                    <button onclick="singleLineIf(form)">Submit</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <p id="demo"></p>
+    <script>
+        //const cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+        //var text = " ";
+        //for (let i = 0; i < cars.length; i++) {
+        //    text += cars[i] + "<br>";
+        //}
+
+        //const person = {
+        //    fname: "John",
+        //    lname: "Doe",
+        //    age: 25
+        //};
+        //var text = "";
+        //for (var x in person) {
+        //    text += person[x] + ' ';
+        //}
+
+        //const cars = ["BMW", "Volvo", "Mini", "Audi", "Honda", "Tesla"];
+        //var text = "";
+        //for (var x of cars) {
+        //    if ((x == 'Volvo' || x == 'BMW') && x != 'Volvo') {
+        //        text += x + '</br>';
+        //    }
+        //    //if (x != 'Volvo') {
+        //    //    if (x == 'BMW') {
+        //    //        text += x + '</br>';
+        //    //    }
+        //    //}
+        //}
+
+        //var language = "JavaScript";
+        //var text = "";
+        //for (let x of language) {
+        //    text += x + "</br>";
+        //}
+
+        //let text = "";
+        //let i = 0;
+        //while (i < 10) {
+        //    text += "<br>The number is " + i;
+        //    i++;
+        //}
+
+        //let text = "";
+        //let i = 0;
+        //while (text.length<500) {
+        //    text += "<br>The number is " + i;
+        //    i-=2;
+        //}
+
+        let activities = [
+            ['Work', 9],
+            ['Eat', 1],
+            ['Comunicate', 2],
+            ['Play Game', 1],
+            ['Sleep', 7]
+        ];
+        console.log(activities[3][0]);//Play Game
+
+       // document.getElementById("demo").innerHTML = text;
+    </script>
+</body>
+</html>

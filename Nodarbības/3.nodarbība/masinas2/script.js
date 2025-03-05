@@ -1,8 +1,10 @@
-const cars = ["BMW", "Volvo", "MINI"];
-let text = "";
+const cars = ["BMW", "Volvo", "MINI","Audi", "Honda", "Mercedes"];
+var text = "";
 
-for (let x of cars) {
-    text += x + "<br>";
+for (var x of cars) {
+    if ((x == 'Volvo'|| x=='BMW') && x != 'Audi'){
+        text += x + "</br>"; 
+    }
 }
 
 document.getElementById("demo").innerHTML = text;
