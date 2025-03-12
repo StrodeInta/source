@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     margin: 50px;
-    background-color: #f4f4f4;
+    background-color: #F4CCE9;
 }
 
 .container {
@@ -11,7 +11,7 @@ body {
     padding: 20px;
     border: 2px solid #ccc;
     border-radius: 10px;
-    background-color: #ffffff;
+    background-color: #a55b7e;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -22,8 +22,8 @@ input, select, button {
 }
 
 button {
-    background-color: #007BFF;
-    color: white;
+    background-color: #f8d5ec;
+    color: #D17D98;
     border: none;
     cursor: pointer;
     border-radius: 5px;
@@ -31,7 +31,7 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #56021F;
 }
 
 .result {
