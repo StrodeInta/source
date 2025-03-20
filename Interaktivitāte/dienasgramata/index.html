@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dienasgrāmata</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Personīgā dienasgrāmata</h1>
+    <button id="dark-mode-toggle">Tumšais režīms</button>
+    <form id="diary-form">
+        <textarea id="entry" rows="5" cols="40" placeholder="Ieraksti savu dienasgrāmatu..."></textarea>
+        <br>
+        <button type="submit">Saglabāt</button>
+    </form>
+    <p id="message" style="display:none; color: green;">Ieraksts saglabāts!</p>
+    <h2>Ieraksti</h2>
+    <ul id="entries-list"></ul>
+    <script src="script.js"></script>
+</body>
+</html>
