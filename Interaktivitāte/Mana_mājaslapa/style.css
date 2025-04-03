@@ -1,11 +1,20 @@
 /* Vispārējie stili */
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css');
+
 :root {
+    --font_family: font-family: "Atkinson Hyperlegible Mono", sans-serif;;
     --primary-color: #59e8aa;
     --secondary-color: #0077b6;
     --dark-color: #0d1b2a;
     --light-color: #f8f9fa;
     --accent-color: #ff6b6b;
     --text-color: #333;
+    --gradient1: linear-gradient(rgb(71, 71, 98), white);
+    --fona_attels:url("atteli/pexels-apasaric-1323712.jpg");
+    --white_background:rgba(231, 231, 231, 0.132);
+    --gaiss_teksts:white;
+    --tumss_teksts:rgb(30, 22, 77);
 }
 
 /* Header stili */
@@ -60,6 +69,7 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    background-image: var(--fona_attels);
 }
 
 /* Satura stili */
@@ -70,6 +80,7 @@ body {
 }
 
 h1 {
+    font-family: var(--font_family);
     color: var(--dark-color);
     font-size: 2.5rem;
     text-align: center;
@@ -97,6 +108,7 @@ p {
     margin: 1.5rem 0;
     padding: 0 1rem;
     font-size: 1.1rem;
+    background-color: var(--white_background);
 }
 
 ul, ol {
@@ -161,11 +173,13 @@ footer {
     position: fixed;
     bottom: 10px;
     right: 30px;
-    height: 200px;
-    width: 250px;
-    background-color: #bbd4ef;
+   /*height: 200px;*/
+    width: 300px;
+    background-color: #d7d3d351;
     display: flex;
     flex-direction: column;
+    margin: 2px;
+    padding: 2px auto;
 }
 .chatWindow h5{
     margin: 0px;
@@ -173,12 +187,64 @@ footer {
 
 }
 
-.chatWindow input, .chatWindow textarea{
+/* .chatWindow input, .chatWindow textarea{
     width: 100%;
     resize: none;
     box-sizing: border-box;
+    border: 2px solid rgba(14, 0, 107, 0.251);
+    padding: 4px 4px;
+    margin-bottom: 4px;
+    margin-right: 3px auto;
+
+} */
+.chatWindow {
+    position: fixed;
+    bottom: 10px;
+    right: 30px;
+    height: auto; /* Lai augstums pielāgojas saturam */
+    width: 250px;
+    background-color: #b0becd5a;
+    display: flex;
+    flex-direction: column;
+    padding: 12px; /* Atstarpe no malas */
+    box-sizing: border-box;
+    border-radius: 8px; /* Noapaļoti stūri */
 }
 
-.chatWindow button{
+.chatWindow input, 
+.chatWindow textarea {
+    width: 100%;
+    resize: none;
+    box-sizing: border-box;
+    border: 2px solid rgba(198, 194, 224, 0.251);
+    padding: 8px;
+    margin-bottom: 10px; /* Atstarpe starp laukiem */
+    border-radius: 4px; /* Noapaļoti lauki */
+}
 
+.chatWindow button {
+    width: 100%;
+    padding: 8px;
+    background-color: #1b263b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.chatWindow button:hover {
+    background-color: #bbcbde3c;
+}
+
+
+.chatWindow button{
+    display: block;
+    margin: 20px auto;
+
+}
+
+.chatWindow .closeButton{
+    position: absolute;
+    right: 10px;
+    top: 0px;
 }

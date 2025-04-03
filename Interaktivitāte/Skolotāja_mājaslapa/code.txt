@@ -1,0 +1,49 @@
+<label for="username">Jūsu vārds:</label>
+                <input type="text" name="username" id="username" required size="20" maxlength="20" minlength="3">
+                <input type="password" name="password" id="password" placeholder="Jūsu parole" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$">
+                <input type="email" name="email" id="password">
+                <input type="hidden" name="id" value="123">
+
+                <div>
+                    <div class="group">
+                        <input type="radio" name="skaitli" id="inp1" value="viens">
+                        <label for="inp1">Skaitlis 1</label>
+                    </div>    
+                    <div class="group">
+                        <input type="radio" name="skaitli" id="inp2" value="divi">
+                        <label for="inp2">Skaitlis 2</label>
+                    </div>
+                    <div class="group">
+                        <input type="radio" name="skaitli" id="inp3" value="trīs">
+                        <label for="inp3">Skaitlis 3</label>
+                    </div>
+                </div>
+                <div>
+                    <input type="checkbox" name="agree" id="agree" value="true">
+                    <label for="agree">Piekrītu lietošanas noteikumiem</label>
+                </div>
+                <div>
+                    <input type="file" name="image" id="image" accept=".jpg,.png">
+                    <label for="image">Ielādēt profila bildi</label>
+                </div>
+
+                
+
+                <div>
+                    <select name="month" id="month">
+                        <option value="">-</option>
+                        <optgroup label="Ziema">
+                            <option value="1">Janvāris</option>
+                            <option value="2">Februāris</option>
+                        </optgroup>
+                        <optgroup label="Pavasaris">
+                            <option value="3">Marts</option>
+                            <option value="4">Aprīlis</option>
+                            <option value="5">Maijs</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div>
+                    <label for="bio">Nedaudz par sevi:</label><br>
+                    <textarea name="bio" id="bio" placeholder="uzraksti par sevi" cols="30" rows="10"></textarea>
+                </div>

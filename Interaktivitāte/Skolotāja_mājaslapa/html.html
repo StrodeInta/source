@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+    <title>HTML</title>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Galvenā</a>
+        <a href="html.html" class="active">HTML</a>
+        <a href="css.html">CSS</a>
+        <a href="js.html">Javascript</a>
+    </nav>
+    <main>
+        <h1>HTML</h1>
+        <p></p>
+        <h3>Populārākie HTML atribūti</h3>
+        <div class="content">
+            <table class="table">
+                <tr>
+                    <td>data-*</td>
+                    <td>Izveido pielāgotus datu atribūtus.</td>
+                </tr>
+                <tr>
+                    <td>disabled</td>
+                    <td>Aizliedz lietotājam mijiedarbību ar elementu.</td>
+                </tr>
+                <tr>
+                    <td>readonly</td>
+                    <td>Padara ievades lauku tikai lasāmu.</td>
+                </tr>
+                <tr>
+                    <td>placeholder</td>
+                    <td>Rāda īsu norādi ievades laukā.</td>
+                </tr>
+                <tr>
+                    <td>value</td>
+                    <td>Norāda elementa vērtību (parasti ievades laukiem).</td>
+                </tr>
+                <tr>
+                    <td>name</td>
+                    <td>Piešķir nosaukumu ievades laukam vai formām.</td>
+                </tr>
+                <tr>
+                    <td>type</td>
+                    <td>Norāda ievades lauka veidu (piemēram, teksts, parole).</td>
+                </tr>
+                <tr>
+                    <td>checked</td>
+                    <td>Nosaka izvēles rūtiņas vai radio pogas sākotnējo stāvokli.</td>
+                </tr>
+                <tr>
+                    <td>target</td>
+                    <td>Norāda, kur atvērt saiti (<code>_blank</code>, <code>_self</code> utt.).</td>
+                </tr>
+                <tr>
+                    <td>download</td>
+                    <td>Lejupielādē failu no saites.</td>
+                </tr>
+                <tr>
+                    <td>rel</td>
+                    <td>Norāda saites attiecības ar dokumentu.</td>
+                </tr>
+                <tr>
+                    <td>lang</td>
+                    <td>Norāda dokumenta valodu.</td>
+                </tr>
+                <tr>
+                    <td>charset</td>
+                    <td>Norāda rakstzīmju kodējumu.</td>
+                </tr>
+                <tr>
+                    <td>async</td>
+                    <td>Norāda, ka skripts jāizpilda asinhroni.</td>
+                </tr>
+                <tr>
+                    <td>defer</td>
+                    <td>Norāda, ka skripta izpilde jāatliek līdz lapas ielādei.</td>
+                </tr>
+                <tr>
+                    <td>autocomplete</td>
+                    <td>Norāda, vai veidlapai jābūt automātiskai aizpildīšanai.</td>
+                </tr>
+                <tr>
+                    <td>autofocus</td>
+                    <td>Automātiski fokusējas uz ievades lauku.</td>
+                </tr>
+                <tr>
+                    <td>form</td>
+                    <td>Norāda, ar kuru formu elements ir saistīts.</td>
+                </tr>
+                <tr>
+                    <td>action</td>
+                    <td>Norāda formu apstrādes vietu (URL).</td>
+                </tr>
+                <tr>
+                    <td>method</td>
+                    <td>Norāda metodi (GET vai POST), ko izmanto formas sūtīšanai.</td>
+                </tr>
+                <tr>
+                    <td>id</td>
+                    <td>Unikāls identifikators elementam.</td>
+                </tr>
+                <tr>
+                    <td>class</td>
+                    <td>Klases nosaukums stilu piemērošanai.</td>
+                </tr>
+                <tr>
+                    <td>style</td>
+                    <td>Inline stilu piemērošana elementam.</td>
+                </tr>
+                <tr>
+                    <td>src</td>
+                    <td>Norāda faila avotu (piemēram, attēlam).</td>
+                </tr>
+                <tr>
+                    <td>href</td>
+                    <td>Norāda saites URL.</td>
+                </tr>
+                <tr>
+                    <td>alt</td>
+                    <td>Alternatīvais teksts attēlam.</td>
+                </tr>
+                <tr>
+                    <td>title</td>
+                    <td>Parāda papildu informāciju par elementu.</td>
+                </tr>
+            </table>
+        </div>
+    </main>
+    <footer>
+        <div class="left_footer">
+            <address>
+                <h3>Mūsu adrese:</h3>
+                <dl>
+                    <dt>Ielas nosaukums:</dt>
+                    <dd>Valērijas Seiles iela 1k-4-214.kabinets, 2.stāvs, Latgales priekšpilsēta,<br>Rīga, LV-1019</dd>
+                    <dt>Tālrunis:</dt>
+                    <dd><a href="tel:+37122038287">22038287</a></dd>
+                    <dt>Epasts:</dt>
+                    <dd><a href="mailto:info@eiropascentrs.lv">info@eiropascentrs.lv</a></dd>
+                </dl>
+            </address>
+            <form action="">
+                    <h3>Sazināties ar mums</h3>
+                <div class="form-element">
+                    <label for="vards">Jūsu vārds:</label>
+                    <input type="text" name="vards" id="vards">
+                </div>
+                <div class="form-element">
+                    <label for="email">Jūsu epasts:</label>
+                    <input type="email" name="email" id="email">
+                </div>
+                <div class="form-element">
+                    <label for="message">Jūsu ziņa:</label>
+                    <textarea name="message" id="message"></textarea>
+                </div>
+                <button type="submit">Nosūtīt</button>
+            </form>
+
+        </div>
+
+        <div class="right_footer">
+            <!-- google maps -->
+            <iframe class="googleMaps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2176.6493241882295!2d24.159480976718783!3d56.93767577354577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eecf2881ab3a2d%3A0x38f05fb5534b5b16!2zRWlyb3BhcyBUxIFsbcSBY8SrYmFzIGNlbnRycw!5e0!3m2!1slv!2slv!4v1743526197484!5m2!1slv!2slv" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </footer>
+</body>
+</html>
