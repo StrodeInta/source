@@ -1,0 +1,184 @@
+/* Vispārējie stili */
+:root {
+    --primary-color: #59e8aa;
+    --secondary-color: #0077b6;
+    --dark-color: #0d1b2a;
+    --light-color: #f8f9fa;
+    --accent-color: #ff6b6b;
+    --text-color: #333;
+}
+
+/* Header stili */
+header {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    text-align: center;
+    padding: 2px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Navigācijas pogu stili */
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    background-color: var(--dark-color);
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+button.active {
+    background-color: var(--accent-color);
+}
+
+/* Body stili */
+body {
+    background-color: var(--primary-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Satura stili */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+h1 {
+    color: var(--dark-color);
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: var(--secondary-color);
+    font-size: 1.8rem;
+    margin: 2rem 0 1rem;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 2cm;
+}
+
+p {
+    text-align: justify;
+    margin: 1.5rem 0;
+    padding: 0 1rem;
+    font-size: 1.1rem;
+}
+
+ul, ol {
+    text-align: left;
+    margin: 1.5rem 2rem;
+    padding-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+/* Footer stili */
+footer {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    padding: 2cm;
+    margin-top: 3rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 2cm;
+    padding: 2cm;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 2cm;
+}
+
+.footer-section h3 {
+    color: var(--primary-color);
+    margin-bottom: 2cm;
+    font-size: 1.2rem;
+}
+
+/* Responsīvais dizains */
+@media (max-width: 768px) {
+    .nav-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+    }
+    
+    .footer-section {
+        margin-left: 2cm;
+        margin-bottom: 2cm;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+}
+.chatWindow {
+    position: fixed;
+    bottom: 10px;
+    right: 30px;
+    height: 200px;
+    width: 250px;
+    background-color: #bbd4ef;
+    display: flex;
+    flex-direction: column;
+}
+.chatWindow h5{
+    margin: 0px;
+    text-align: center;
+
+}
+
+.chatWindow input, .chatWindow textarea{
+    width: 100%;
+    resize: none;
+    box-sizing: border-box;
+}
+
+.chatWindow button{
+
+}
