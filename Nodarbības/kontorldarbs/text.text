@@ -1,0 +1,9 @@
+biblioteka/
+│
+├── index.html         # Sākumlapa ar navigāciju
+├── books.html         # Grāmatu CRUD lapa
+├── authors.html       # AutorU CRUD lapa
+├── books.xml          # Grāmatu dati XML formātā (nav obligāti, ja viss notiek JS)
+│
+├── style.css          # Kopējais stils visām lapām
+└── script.js          # Galvenais JavaScript (vai sadali books.js / authors.js)

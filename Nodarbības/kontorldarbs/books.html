@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <title>Grāmatas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Sākums</a> |
+        <a href="books.html">Grāmatas</a> |
+        <a href="authors.html">Autori</a>
+    </nav>
+    <h1>Grāmatu saraksts</h1>
+    <table id="booksTable">
+        <thead>
+            <tr>
+                <th>Nosaukums</th>
+                <th>Autors</th>
+                <th>Gads</th>
+                <th>ISBN</th>
+                <th>Pieejama</th>
+                <th>Darbības</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <form id="bookForm">
+        <h2 id="formTitle">Pievienot jaunu grāmatu</h2>
+        <input type="hidden" id="bookId">
+        <label>Nosaukums*:
+            <input type="text" id="title" required>
+        </label>
+        <label>Autors*:
+            <input type="text" id="author" required>
+        </label>
+        <label>Gads*:
+            <input type="number" id="year" required min="0" max="2100">
+        </label>
+        <label>ISBN*:
+            <input type="text" id="isbn" required pattern="^[0-9\-]+$">
+        </label>
+        <label>
+            <input type="checkbox" id="available"> Pieejama
+        </label>
+        <button type="submit">Saglabāt</button>
+        <button type="button" id="cancelBtn" style="display:none;">Atcelt</button>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>

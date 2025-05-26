@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library>
+    <book>
+        <title>Rīgas Noslēpumi</title>
+        <author>Jānis Bērziņš</author>
+        <year>2010</year>
+        <isbn>978-9984-11-123-4</isbn>
+        <available>yes</available>
+    </book>
+    <book>
+        <title>Latviešu Daba</title>
+        <author>Anna Kalniņa</author>
+        <year>2018</year>
+        <isbn>978-9984-11-567-8</isbn>
+        <available>no</available>
+    </book>
+</library>

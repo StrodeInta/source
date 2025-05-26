@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <title>Autori</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Sākums</a> |
+        <a href="books.html">Grāmatas</a> |
+        <a href="authors.html">Autori</a>
+    </nav>
+    <h1>Autoru saraksts</h1>
+    <table id="authorsTable">
+        <thead>
+            <tr>
+                <th>Vārds</th>
+                <th>Dzimšanas gads</th>
+                <th>Darbības</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <form id="authorForm">
+        <h2 id="authorFormTitle">Pievienot jaunu autoru</h2>
+        <input type="hidden" id="authorId">
+        <label>Vārds*:
+            <input type="text" id="authorName" required>
+        </label>
+        <label>Dzimšanas gads*:
+            <input type="number" id="birthYear" required min="1800" max="2100">
+        </label>
+        <button type="submit">Saglabāt</button>
+        <button type="button" id="authorCancelBtn" style="display:none;">Atcelt</button>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
