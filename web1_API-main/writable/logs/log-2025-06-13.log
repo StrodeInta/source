@@ -1,0 +1,560 @@
+ERROR - 2025-06-13 15:23:15 --> mysqli_sql_exception: Column 'post_title' cannot be null in /Applications/MAMP/htdocs/web1_api/system/Database/MySQLi/Connection.php:327
+Stack trace:
+#0 /Applications/MAMP/htdocs/web1_api/system/Database/MySQLi/Connection.php(327): mysqli->query('INSERT INTO `po...', 0)
+#1 /Applications/MAMP/htdocs/web1_api/system/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `po...')
+#2 /Applications/MAMP/htdocs/web1_api/system/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `po...')
+#3 /Applications/MAMP/htdocs/web1_api/system/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `po...', Array, false)
+#4 /Applications/MAMP/htdocs/web1_api/app/Controllers/Home.php(120): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 /Applications/MAMP/htdocs/web1_api/system/CodeIgniter.php(933): App\Controllers\Home->add_post()
+#6 /Applications/MAMP/htdocs/web1_api/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 /Applications/MAMP/htdocs/web1_api/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Applications/MAMP/htdocs/web1_api/system/Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 /Applications/MAMP/htdocs/web1_api/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 /Applications/MAMP/htdocs/web1_api/public/index.php(69): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-06-13 15:23:15 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'post_title' cannot be null
+[Method: POST, Route: posts/create]
+in SYSTEMPATH/Database/BaseConnection.php on line 692.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (:post_title:, :post_content:)', [...], false)
+ 2 APPPATH/Controllers/Home.php(120): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->add_post()
+ 4 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(69): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-13 15:23:15 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'post_title' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 332.
+ 1 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (NULL, NULL)')
+ 2 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (NULL, NULL)')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (:post_title:, :post_content:)', [...], false)
+ 4 APPPATH/Controllers/Home.php(120): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->add_post()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(69): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-13 15:23:15 --> [Caused by] mysqli_sql_exception: Column 'post_title' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 327.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(327): mysqli->query('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (NULL, NULL)', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (NULL, NULL)')
+ 3 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (NULL, NULL)')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (:post_title:, :post_content:)', [...], false)
+ 5 APPPATH/Controllers/Home.php(120): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->add_post()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(69): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-06-13 15:24:39 --> mysqli_sql_exception: Column 'post_title' cannot be null in /Applications/MAMP/htdocs/web1_api/system/Database/MySQLi/Connection.php:327
+Stack trace:
+#0 /Applications/MAMP/htdocs/web1_api/system/Database/MySQLi/Connection.php(327): mysqli->query('INSERT INTO `po...', 0)
+#1 /Applications/MAMP/htdocs/web1_api/system/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `po...')
+#2 /Applications/MAMP/htdocs/web1_api/system/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `po...')
+#3 /Applications/MAMP/htdocs/web1_api/system/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `po...', Array, false)
+#4 /Applications/MAMP/htdocs/web1_api/app/Controllers/Home.php(120): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 /Applications/MAMP/htdocs/web1_api/system/CodeIgniter.php(933): App\Controllers\Home->add_post()
+#6 /Applications/MAMP/htdocs/web1_api/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 /Applications/MAMP/htdocs/web1_api/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Applications/MAMP/htdocs/web1_api/system/Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 /Applications/MAMP/htdocs/web1_api/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 /Applications/MAMP/htdocs/web1_api/public/index.php(69): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-06-13 15:24:39 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'post_title' cannot be null
+[Method: POST, Route: posts/create]
+in SYSTEMPATH/Database/BaseConnection.php on line 692.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (:post_title:, :post_content:)', [...], false)
+ 2 APPPATH/Controllers/Home.php(120): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->add_post()
+ 4 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(69): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-13 15:24:39 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'post_title' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 332.
+ 1 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (NULL, NULL)')
+ 2 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (NULL, NULL)')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (:post_title:, :post_content:)', [...], false)
+ 4 APPPATH/Controllers/Home.php(120): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->add_post()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(69): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-13 15:24:39 --> [Caused by] mysqli_sql_exception: Column 'post_title' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 327.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(327): mysqli->query('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (NULL, NULL)', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (NULL, NULL)')
+ 3 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (NULL, NULL)')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (:post_title:, :post_content:)', [...], false)
+ 5 APPPATH/Controllers/Home.php(120): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->add_post()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(69): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-06-13 15:24:52 --> mysqli_sql_exception: Column 'post_title' cannot be null in /Applications/MAMP/htdocs/web1_api/system/Database/MySQLi/Connection.php:327
+Stack trace:
+#0 /Applications/MAMP/htdocs/web1_api/system/Database/MySQLi/Connection.php(327): mysqli->query('INSERT INTO `po...', 0)
+#1 /Applications/MAMP/htdocs/web1_api/system/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `po...')
+#2 /Applications/MAMP/htdocs/web1_api/system/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `po...')
+#3 /Applications/MAMP/htdocs/web1_api/system/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `po...', Array, false)
+#4 /Applications/MAMP/htdocs/web1_api/app/Controllers/Home.php(120): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 /Applications/MAMP/htdocs/web1_api/system/CodeIgniter.php(933): App\Controllers\Home->add_post()
+#6 /Applications/MAMP/htdocs/web1_api/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 /Applications/MAMP/htdocs/web1_api/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Applications/MAMP/htdocs/web1_api/system/Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 /Applications/MAMP/htdocs/web1_api/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 /Applications/MAMP/htdocs/web1_api/public/index.php(69): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-06-13 15:24:52 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'post_title' cannot be null
+[Method: POST, Route: posts/create]
+in SYSTEMPATH/Database/BaseConnection.php on line 692.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (:post_title:, :post_content:)', [...], false)
+ 2 APPPATH/Controllers/Home.php(120): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->add_post()
+ 4 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(69): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-13 15:24:52 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'post_title' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 332.
+ 1 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (NULL, NULL)')
+ 2 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (NULL, NULL)')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (:post_title:, :post_content:)', [...], false)
+ 4 APPPATH/Controllers/Home.php(120): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->add_post()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(69): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-13 15:24:52 --> [Caused by] mysqli_sql_exception: Column 'post_title' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 327.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(327): mysqli->query('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (NULL, NULL)', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (NULL, NULL)')
+ 3 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (NULL, NULL)')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (:post_title:, :post_content:)', [...], false)
+ 5 APPPATH/Controllers/Home.php(120): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->add_post()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(69): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-06-13 15:25:04 --> mysqli_sql_exception: Column 'post_title' cannot be null in /Applications/MAMP/htdocs/web1_api/system/Database/MySQLi/Connection.php:327
+Stack trace:
+#0 /Applications/MAMP/htdocs/web1_api/system/Database/MySQLi/Connection.php(327): mysqli->query('INSERT INTO `po...', 0)
+#1 /Applications/MAMP/htdocs/web1_api/system/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `po...')
+#2 /Applications/MAMP/htdocs/web1_api/system/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `po...')
+#3 /Applications/MAMP/htdocs/web1_api/system/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `po...', Array, false)
+#4 /Applications/MAMP/htdocs/web1_api/app/Controllers/Home.php(120): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 /Applications/MAMP/htdocs/web1_api/system/CodeIgniter.php(933): App\Controllers\Home->add_post()
+#6 /Applications/MAMP/htdocs/web1_api/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 /Applications/MAMP/htdocs/web1_api/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Applications/MAMP/htdocs/web1_api/system/Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 /Applications/MAMP/htdocs/web1_api/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 /Applications/MAMP/htdocs/web1_api/public/index.php(69): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-06-13 15:25:04 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'post_title' cannot be null
+[Method: POST, Route: posts/create]
+in SYSTEMPATH/Database/BaseConnection.php on line 692.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (:post_title:, :post_content:)', [...], false)
+ 2 APPPATH/Controllers/Home.php(120): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->add_post()
+ 4 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(69): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-13 15:25:04 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'post_title' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 332.
+ 1 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (NULL, NULL)')
+ 2 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (NULL, NULL)')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (:post_title:, :post_content:)', [...], false)
+ 4 APPPATH/Controllers/Home.php(120): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->add_post()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(69): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-13 15:25:04 --> [Caused by] mysqli_sql_exception: Column 'post_title' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 327.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(327): mysqli->query('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (NULL, NULL)', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (NULL, NULL)')
+ 3 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (NULL, NULL)')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (:post_title:, :post_content:)', [...], false)
+ 5 APPPATH/Controllers/Home.php(120): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->add_post()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(69): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-06-13 15:27:27 --> mysqli_sql_exception: Column 'post_title' cannot be null in /Applications/MAMP/htdocs/web1_api/system/Database/MySQLi/Connection.php:327
+Stack trace:
+#0 /Applications/MAMP/htdocs/web1_api/system/Database/MySQLi/Connection.php(327): mysqli->query('INSERT INTO `po...', 0)
+#1 /Applications/MAMP/htdocs/web1_api/system/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `po...')
+#2 /Applications/MAMP/htdocs/web1_api/system/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `po...')
+#3 /Applications/MAMP/htdocs/web1_api/system/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `po...', Array, false)
+#4 /Applications/MAMP/htdocs/web1_api/app/Controllers/Home.php(120): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 /Applications/MAMP/htdocs/web1_api/system/CodeIgniter.php(933): App\Controllers\Home->add_post()
+#6 /Applications/MAMP/htdocs/web1_api/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 /Applications/MAMP/htdocs/web1_api/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Applications/MAMP/htdocs/web1_api/system/Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 /Applications/MAMP/htdocs/web1_api/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 /Applications/MAMP/htdocs/web1_api/public/index.php(69): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-06-13 15:27:27 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'post_title' cannot be null
+[Method: POST, Route: posts/create]
+in SYSTEMPATH/Database/BaseConnection.php on line 692.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (:post_title:, :post_content:)', [...], false)
+ 2 APPPATH/Controllers/Home.php(120): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->add_post()
+ 4 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(69): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-13 15:27:27 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'post_title' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 332.
+ 1 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (NULL, NULL)')
+ 2 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (NULL, NULL)')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (:post_title:, :post_content:)', [...], false)
+ 4 APPPATH/Controllers/Home.php(120): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->add_post()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(69): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-13 15:27:27 --> [Caused by] mysqli_sql_exception: Column 'post_title' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 327.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(327): mysqli->query('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (NULL, NULL)', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (NULL, NULL)')
+ 3 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (NULL, NULL)')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (:post_title:, :post_content:)', [...], false)
+ 5 APPPATH/Controllers/Home.php(120): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->add_post()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(69): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-06-13 15:31:42 --> mysqli_sql_exception: Column 'post_title' cannot be null in /Applications/MAMP/htdocs/web1_api/system/Database/MySQLi/Connection.php:327
+Stack trace:
+#0 /Applications/MAMP/htdocs/web1_api/system/Database/MySQLi/Connection.php(327): mysqli->query('INSERT INTO `po...', 0)
+#1 /Applications/MAMP/htdocs/web1_api/system/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `po...')
+#2 /Applications/MAMP/htdocs/web1_api/system/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `po...')
+#3 /Applications/MAMP/htdocs/web1_api/system/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `po...', Array, false)
+#4 /Applications/MAMP/htdocs/web1_api/app/Controllers/Home.php(120): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 /Applications/MAMP/htdocs/web1_api/system/CodeIgniter.php(933): App\Controllers\Home->add_post()
+#6 /Applications/MAMP/htdocs/web1_api/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 /Applications/MAMP/htdocs/web1_api/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Applications/MAMP/htdocs/web1_api/system/Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 /Applications/MAMP/htdocs/web1_api/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 /Applications/MAMP/htdocs/web1_api/public/index.php(69): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-06-13 15:31:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'post_title' cannot be null
+[Method: POST, Route: posts/create]
+in SYSTEMPATH/Database/BaseConnection.php on line 692.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (:post_title:, :post_content:)', [...], false)
+ 2 APPPATH/Controllers/Home.php(120): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->add_post()
+ 4 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(69): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-13 15:31:42 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'post_title' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 332.
+ 1 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (NULL, NULL)')
+ 2 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (NULL, NULL)')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (:post_title:, :post_content:)', [...], false)
+ 4 APPPATH/Controllers/Home.php(120): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->add_post()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(69): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-13 15:31:42 --> [Caused by] mysqli_sql_exception: Column 'post_title' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 327.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(327): mysqli->query('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (NULL, NULL)', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (NULL, NULL)')
+ 3 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (NULL, NULL)')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (:post_title:, :post_content:)', [...], false)
+ 5 APPPATH/Controllers/Home.php(120): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->add_post()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(69): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-06-13 15:40:41 --> mysqli_sql_exception: Column 'post_title' cannot be null in /Applications/MAMP/htdocs/web1_api/system/Database/MySQLi/Connection.php:327
+Stack trace:
+#0 /Applications/MAMP/htdocs/web1_api/system/Database/MySQLi/Connection.php(327): mysqli->query('INSERT INTO `po...', 0)
+#1 /Applications/MAMP/htdocs/web1_api/system/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `po...')
+#2 /Applications/MAMP/htdocs/web1_api/system/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `po...')
+#3 /Applications/MAMP/htdocs/web1_api/system/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `po...', Array, false)
+#4 /Applications/MAMP/htdocs/web1_api/app/Controllers/Home.php(120): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 /Applications/MAMP/htdocs/web1_api/system/CodeIgniter.php(933): App\Controllers\Home->add_post()
+#6 /Applications/MAMP/htdocs/web1_api/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 /Applications/MAMP/htdocs/web1_api/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Applications/MAMP/htdocs/web1_api/system/Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 /Applications/MAMP/htdocs/web1_api/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 /Applications/MAMP/htdocs/web1_api/public/index.php(69): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-06-13 15:40:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'post_title' cannot be null
+[Method: POST, Route: posts/create]
+in SYSTEMPATH/Database/BaseConnection.php on line 692.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (:post_title:, :post_content:)', [...], false)
+ 2 APPPATH/Controllers/Home.php(120): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->add_post()
+ 4 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(69): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-13 15:40:41 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'post_title' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 332.
+ 1 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (NULL, NULL)')
+ 2 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (NULL, NULL)')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (:post_title:, :post_content:)', [...], false)
+ 4 APPPATH/Controllers/Home.php(120): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->add_post()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(69): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-13 15:40:41 --> [Caused by] mysqli_sql_exception: Column 'post_title' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 327.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(327): mysqli->query('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (NULL, NULL)', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (NULL, NULL)')
+ 3 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (NULL, NULL)')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (:post_title:, :post_content:)', [...], false)
+ 5 APPPATH/Controllers/Home.php(120): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->add_post()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(69): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-06-13 15:41:08 --> mysqli_sql_exception: Column 'post_title' cannot be null in /Applications/MAMP/htdocs/web1_api/system/Database/MySQLi/Connection.php:327
+Stack trace:
+#0 /Applications/MAMP/htdocs/web1_api/system/Database/MySQLi/Connection.php(327): mysqli->query('INSERT INTO `po...', 0)
+#1 /Applications/MAMP/htdocs/web1_api/system/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `po...')
+#2 /Applications/MAMP/htdocs/web1_api/system/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `po...')
+#3 /Applications/MAMP/htdocs/web1_api/system/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `po...', Array, false)
+#4 /Applications/MAMP/htdocs/web1_api/app/Controllers/Home.php(120): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 /Applications/MAMP/htdocs/web1_api/system/CodeIgniter.php(933): App\Controllers\Home->add_post()
+#6 /Applications/MAMP/htdocs/web1_api/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 /Applications/MAMP/htdocs/web1_api/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Applications/MAMP/htdocs/web1_api/system/Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 /Applications/MAMP/htdocs/web1_api/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 /Applications/MAMP/htdocs/web1_api/public/index.php(69): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-06-13 15:41:08 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'post_title' cannot be null
+[Method: POST, Route: posts/create]
+in SYSTEMPATH/Database/BaseConnection.php on line 692.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (:post_title:, :post_content:)', [...], false)
+ 2 APPPATH/Controllers/Home.php(120): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->add_post()
+ 4 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(69): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-13 15:41:08 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'post_title' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 332.
+ 1 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (NULL, NULL)')
+ 2 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (NULL, NULL)')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (:post_title:, :post_content:)', [...], false)
+ 4 APPPATH/Controllers/Home.php(120): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->add_post()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(69): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-13 15:41:08 --> [Caused by] mysqli_sql_exception: Column 'post_title' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 327.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(327): mysqli->query('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (NULL, NULL)', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (NULL, NULL)')
+ 3 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (NULL, NULL)')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (:post_title:, :post_content:)', [...], false)
+ 5 APPPATH/Controllers/Home.php(120): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->add_post()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(69): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-06-13 15:41:56 --> mysqli_sql_exception: Column 'post_title' cannot be null in /Applications/MAMP/htdocs/web1_api/system/Database/MySQLi/Connection.php:327
+Stack trace:
+#0 /Applications/MAMP/htdocs/web1_api/system/Database/MySQLi/Connection.php(327): mysqli->query('INSERT INTO `po...', 0)
+#1 /Applications/MAMP/htdocs/web1_api/system/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `po...')
+#2 /Applications/MAMP/htdocs/web1_api/system/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `po...')
+#3 /Applications/MAMP/htdocs/web1_api/system/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `po...', Array, false)
+#4 /Applications/MAMP/htdocs/web1_api/app/Controllers/Home.php(120): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 /Applications/MAMP/htdocs/web1_api/system/CodeIgniter.php(933): App\Controllers\Home->add_post()
+#6 /Applications/MAMP/htdocs/web1_api/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 /Applications/MAMP/htdocs/web1_api/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Applications/MAMP/htdocs/web1_api/system/Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 /Applications/MAMP/htdocs/web1_api/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 /Applications/MAMP/htdocs/web1_api/public/index.php(69): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-06-13 15:41:57 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'post_title' cannot be null
+[Method: POST, Route: posts/create]
+in SYSTEMPATH/Database/BaseConnection.php on line 692.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (:post_title:, :post_content:)', [...], false)
+ 2 APPPATH/Controllers/Home.php(120): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->add_post()
+ 4 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(69): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-13 15:41:57 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'post_title' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 332.
+ 1 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (NULL, NULL)')
+ 2 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (NULL, NULL)')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (:post_title:, :post_content:)', [...], false)
+ 4 APPPATH/Controllers/Home.php(120): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->add_post()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(69): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-13 15:41:57 --> [Caused by] mysqli_sql_exception: Column 'post_title' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 327.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(327): mysqli->query('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (NULL, NULL)', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (NULL, NULL)')
+ 3 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (NULL, NULL)')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (:post_title:, :post_content:)', [...], false)
+ 5 APPPATH/Controllers/Home.php(120): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->add_post()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(69): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-06-13 15:44:43 --> mysqli_sql_exception: Column 'post_title' cannot be null in /Applications/MAMP/htdocs/web1_api/system/Database/MySQLi/Connection.php:327
+Stack trace:
+#0 /Applications/MAMP/htdocs/web1_api/system/Database/MySQLi/Connection.php(327): mysqli->query('INSERT INTO `po...', 0)
+#1 /Applications/MAMP/htdocs/web1_api/system/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `po...')
+#2 /Applications/MAMP/htdocs/web1_api/system/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `po...')
+#3 /Applications/MAMP/htdocs/web1_api/system/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `po...', Array, false)
+#4 /Applications/MAMP/htdocs/web1_api/app/Controllers/Home.php(120): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 /Applications/MAMP/htdocs/web1_api/system/CodeIgniter.php(933): App\Controllers\Home->add_post()
+#6 /Applications/MAMP/htdocs/web1_api/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 /Applications/MAMP/htdocs/web1_api/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Applications/MAMP/htdocs/web1_api/system/Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 /Applications/MAMP/htdocs/web1_api/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 /Applications/MAMP/htdocs/web1_api/public/index.php(69): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-06-13 15:44:43 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'post_title' cannot be null
+[Method: POST, Route: posts/create]
+in SYSTEMPATH/Database/BaseConnection.php on line 692.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (:post_title:, :post_content:)', [...], false)
+ 2 APPPATH/Controllers/Home.php(120): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->add_post()
+ 4 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(69): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-13 15:44:43 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'post_title' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 332.
+ 1 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (NULL, NULL)')
+ 2 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (NULL, NULL)')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (:post_title:, :post_content:)', [...], false)
+ 4 APPPATH/Controllers/Home.php(120): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->add_post()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(69): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-13 15:44:43 --> [Caused by] mysqli_sql_exception: Column 'post_title' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 327.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(327): mysqli->query('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (NULL, NULL)', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (NULL, NULL)')
+ 3 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (NULL, NULL)')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `posts` (`post_title`, `post_content`) VALUES (:post_title:, :post_content:)', [...], false)
+ 5 APPPATH/Controllers/Home.php(120): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->add_post()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(69): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-13 18:18:40 --> ErrorException: Undefined variable $result
+[Method: DELETE, Route: posts/delete/32]
+in APPPATH/Controllers/Home.php on line 159.
+ 1 APPPATH/Controllers/Home.php(159): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $result', '/Applications/MAMP/htdocs/web1_api/app/Controllers/Home.php', 159)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->delete_post('32')
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(69): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-13 18:27:12 --> ErrorException: Undefined variable $result
+[Method: DELETE, Route: posts/delete/32]
+in APPPATH/Controllers/Home.php on line 159.
+ 1 APPPATH/Controllers/Home.php(159): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $result', '/Applications/MAMP/htdocs/web1_api/app/Controllers/Home.php', 159)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->delete_post('32')
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(69): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-13 18:29:10 --> ErrorException: Undefined variable $result
+[Method: DELETE, Route: posts/delete/32]
+in APPPATH/Controllers/Home.php on line 159.
+ 1 APPPATH/Controllers/Home.php(159): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $result', '/Applications/MAMP/htdocs/web1_api/app/Controllers/Home.php', 159)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->delete_post('32')
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(69): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-13 18:30:07 --> ErrorException: Undefined variable $result
+[Method: DELETE, Route: posts/delete/29]
+in APPPATH/Controllers/Home.php on line 159.
+ 1 APPPATH/Controllers/Home.php(159): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $result', '/Applications/MAMP/htdocs/web1_api/app/Controllers/Home.php', 159)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->delete_post('29')
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(69): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-13 18:31:44 --> ErrorException: Undefined variable $result
+[Method: DELETE, Route: posts/delete/30]
+in APPPATH/Controllers/Home.php on line 159.
+ 1 APPPATH/Controllers/Home.php(159): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $result', '/Applications/MAMP/htdocs/web1_api/app/Controllers/Home.php', 159)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->delete_post('30')
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(69): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-13 18:32:42 --> ErrorException: Undefined variable $result
+[Method: DELETE, Route: posts/delete/24]
+in APPPATH/Controllers/Home.php on line 159.
+ 1 APPPATH/Controllers/Home.php(159): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $result', '/Applications/MAMP/htdocs/web1_api/app/Controllers/Home.php', 159)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->delete_post('24')
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(69): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
